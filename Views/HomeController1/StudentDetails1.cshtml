@@ -1,0 +1,37 @@
+﻿@model Lesson1_Task1_MiddleWare.Models.Student
+
+@{
+    ViewData["Title"] = "StudentDetails1";
+}
+
+<h1>Полная информация о студенте</h1>
+
+<table>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Id)</td>
+        <td>@Html.DisplayFor(model => model.Id)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Name)</td>
+        <td>@Html.DisplayFor(model => model.Name)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.SurName)</td>
+        <td>@Html.DisplayFor(model => model.SurName)</td>
+    </tr>
+    <tr>
+        <td> @Html.DisplayNameFor(model => model.Univercity)</td>
+        <td>@Html.DisplayFor(model => model.Univercity)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.FacultyName)</td>
+        <td>@Html.DisplayFor(model => model.FacultyName)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Date)</td>
+        <td>@Html.DisplayFor(model => model.Date)</td>
+    </tr>
+</table>
+<div>
+    @Html.ActionLink("На главную", "Index1", new { /* id = Model.PrimaryKey */ })
+</div>

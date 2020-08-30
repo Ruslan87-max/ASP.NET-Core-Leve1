@@ -1,0 +1,29 @@
+﻿@model Lesson1_Task1_MiddleWare.Models.Employee
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<hr />
+<h1>Детальная информация о сотруднике</h1>
+<hr />
+<table class="table table-bordered" style="border:5px solid #ddd">
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Id)</td>
+        <td>@Html.DisplayFor(model => model.Id)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Name)</td>
+        <td>@Html.DisplayFor(model => model.Name)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Age)</td>
+        <td>@Html.DisplayFor(model => model.Age)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Position)</td>
+        <td>@Html.DisplayFor(model => model.Position)</td>
+    </tr>
+
+</table>
+<div>@Html.ActionLink("На главную", "Index", new { /* id = Model.PrimaryKey */ })</div>
