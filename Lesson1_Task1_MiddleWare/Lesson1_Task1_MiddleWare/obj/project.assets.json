@@ -6074,11 +6074,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Образование\\GeekBrains\\C# ASP.NET Core. Уровень 1\\Projects\\HomeWorks\\Lesson1_Task1_MiddleWare\\Lesson1_Task1_MiddleWare\\Lesson1_Task1_MiddleWare.csproj",
+      "projectUniqueName": "F:\\Образование\\GeekBrains\\C# ASP.NET Core. Уровень 1\\Repositories\\HomeWorks\\Lesson1_Task1_MiddleWare\\Lesson1_Task1_MiddleWare\\Lesson1_Task1_MiddleWare.csproj",
       "projectName": "Lesson1_Task1_MiddleWare",
-      "projectPath": "F:\\Образование\\GeekBrains\\C# ASP.NET Core. Уровень 1\\Projects\\HomeWorks\\Lesson1_Task1_MiddleWare\\Lesson1_Task1_MiddleWare\\Lesson1_Task1_MiddleWare.csproj",
+      "projectPath": "F:\\Образование\\GeekBrains\\C# ASP.NET Core. Уровень 1\\Repositories\\HomeWorks\\Lesson1_Task1_MiddleWare\\Lesson1_Task1_MiddleWare\\Lesson1_Task1_MiddleWare.csproj",
       "packagesPath": "C:\\Users\\Руслан\\.nuget\\packages\\",
-      "outputPath": "F:\\Образование\\GeekBrains\\C# ASP.NET Core. Уровень 1\\Projects\\HomeWorks\\Lesson1_Task1_MiddleWare\\Lesson1_Task1_MiddleWare\\obj\\",
+      "outputPath": "F:\\Образование\\GeekBrains\\C# ASP.NET Core. Уровень 1\\Repositories\\HomeWorks\\Lesson1_Task1_MiddleWare\\Lesson1_Task1_MiddleWare\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Руслан\\AppData\\Roaming\\NuGet\\NuGet.Config",
