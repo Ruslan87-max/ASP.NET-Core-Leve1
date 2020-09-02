@@ -225,3 +225,7 @@ F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositor
 F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\obj\Debug\netcoreapp3.1\Razor\Views\Store\ProductDetails.cshtml.g.cs
 F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\obj\Debug\netcoreapp3.1\Razor\Views\Store\Shop.cshtml.g.cs
+F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\obj\Debug\netcoreapp3.1\Razor\Views\Store\Partial\_LeftSidebar.cshtml.g.cs
+F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\obj\Debug\netcoreapp3.1\Razor\Views\Store\Login.cshtml.g.cs

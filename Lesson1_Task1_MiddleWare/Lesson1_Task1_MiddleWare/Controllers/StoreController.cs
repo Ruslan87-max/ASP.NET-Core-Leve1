@@ -34,6 +34,12 @@ namespace Lesson1_Task1_MiddleWare.Controllers
             return View();
 
         }
+
+        public IActionResult Login()
+        {
+            return View();
+
+        }
         public IActionResult NotFound404()
         {
             return View();
