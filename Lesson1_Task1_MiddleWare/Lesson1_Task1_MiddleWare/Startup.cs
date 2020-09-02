@@ -29,6 +29,8 @@ namespace Lesson1_Task1_MiddleWare
 
             app.UseRouting();
 
+            app.UseStaticFiles();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

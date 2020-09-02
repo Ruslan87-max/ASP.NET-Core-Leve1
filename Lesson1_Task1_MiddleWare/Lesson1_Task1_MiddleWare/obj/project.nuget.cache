@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pvF36xwFTpTe3zg8Y6D2f/I2reHe6z4Br3dR/foMx4p2X93tmfgMRm1068KHW4edeLfvpcRePSr4ZaNuF7pngw==",
+  "dgSpecHash": "uNbU6juJpVlogHJNFsy+JY+k6N9p/nPJv6nlzWBuS+JMkfkgI1SROIJ/h7Q2ECtqFp4R6z69dIpz8poqwjN2uQ==",
   "success": true,
-  "projectFilePath": "F:\\Образование\\GeekBrains\\C# ASP.NET Core. Уровень 1\\Projects\\HomeWorks\\Lesson1_Task1_MiddleWare\\Lesson1_Task1_MiddleWare\\Lesson1_Task1_MiddleWare.csproj",
+  "projectFilePath": "F:\\Образование\\GeekBrains\\C# ASP.NET Core. Уровень 1\\Repositories\\HomeWorks\\Lesson1_Task1_MiddleWare\\Lesson1_Task1_MiddleWare\\Lesson1_Task1_MiddleWare.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Руслан\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Руслан\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Lesson1_Task1_MiddleWare.Controllers
 {
-    public class HomeController1 : Controller
+    public class StudentController : Controller 
     {
         StudentsList studentsList = new StudentsList();
         public IActionResult Index1()
