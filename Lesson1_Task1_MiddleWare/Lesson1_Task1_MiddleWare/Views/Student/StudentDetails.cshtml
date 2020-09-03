@@ -1,0 +1,39 @@
+﻿@model Lesson1_Task1_MiddleWare.Models.Student
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Полная информация о студенте</h1>
+            <table class="table table-bordered">
+                    <tr>
+                        <th>Id</th>
+                        <td>@Model.Id</td>
+                    </tr>
+                    <tr>
+                        <th>Имя</th>
+                        <td>@Model.Name</td>
+                    </tr>
+                    <tr>
+                        <th>Фамилие</th>
+                        <td>@Model.SurName</td>
+                    </tr>
+                    <tr>
+                        <th>Университет</th>
+                        <td>@Model.Univercity</td>
+                    </tr>
+                    <tr>
+                        <th>Факультет</th>
+                        <td>@Model.FacultyName</td>
+                    </tr>
+                    <tr>
+                        <th>Дата поступления</th>
+                        <td>@Model.Date</td>
+                    </tr>
+            </table>
+            <form>
+                <button asp-action="Index" type="submit" class="btn btn-success">На главную</button>
+            </form>
+        </div>
+    </div>
+</div>
