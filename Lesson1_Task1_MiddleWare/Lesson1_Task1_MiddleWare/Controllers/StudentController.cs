@@ -47,7 +47,7 @@ namespace Lesson1_Task1_MiddleWare.Controllers
             if (id.HasValue)
             {
                 studentModel = _studentsService.GetById(id.Value);
-                if (ReferenceEquals(studentModel, null))
+                if (ReferenceEquals(studentModel, null))  
                     return NotFound();// возвращаем результат 404 Not Found
             }
             else
@@ -74,6 +74,8 @@ namespace Lesson1_Task1_MiddleWare.Controllers
                 dbItem.Univercity = studentModel.Univercity;
                 dbItem.FacultyName = studentModel.FacultyName;
                 dbItem.Date = studentModel.Date;
+
+                studentModel = dbItem;
             }
             else
             {
