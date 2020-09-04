@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Lesson1_Task1_MiddleWare.InfroStrucure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -17,19 +18,29 @@ namespace Lesson1_Task1_MiddleWare
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            // Добавляем разрешение зависимости
+            services.AddSingleton<IStudentsService, InMemoryStudentsData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
+            if (env.IsDevelopment()) //Есди среда - Development
             {
-                app.UseDeveloperExceptionPage();
+                app.UseDeveloperExceptionPage(); //Подробная инф-я об ошибке.
             }
+
+            app.UseStaticFiles();
 
             app.UseRouting();
 
-            app.UseStaticFiles();
+            //app.Run(async (context) =>
+            //{
+            //    await context.Response.WriteAsync("No handler found for this request...");
+            //});
+
+            app.UseWelcomePage("/Welcome");
 
             app.UseEndpoints(endpoints =>
             {
@@ -37,6 +48,8 @@ namespace Lesson1_Task1_MiddleWare
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            //app.UseWelcomePage(); /*Конвейер обработки запросов MVC выполниться первым вместо UseWelcomePage()*/
         }
     }
 }
