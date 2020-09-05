@@ -3,7 +3,7 @@
 
 <div class="container">
     <div class="row ">
-        <div class="col-sm-10 col-sm-push-1">
+        <div class="col-sm-12">
             <div class="row">
                 <div class="col-sm-12">
                     <h1>Студенты</h1>
@@ -15,23 +15,17 @@
                     <p></p>
                 </div>
             </div>
-            <table class="table table-bordered">
-                <thead style="font-size: 17px">
+            <table class="table table-hover">
+                <thead style="font-size: 17px; filter: invert(80%);">
                     <tr>
-                        <th> Имя</th>
+                        <th>Имя</th>
                         <th>Фамилие </th>
-                        <th>Дата поступления </th>
+                        <th>Статус</th>
                         <th>
                             <div class="row">
-                                <div class="col-sm-3 col-sm-push-1">
-                                    Детали
-                                </div>
-                                <div class="col-sm-3 col-sm-push-1">
-                                    Править
-                                </div>
-                                <div class="col-sm-3 col-sm-push-1">
-                                    Удалить
-                                </div>
+                                <div class="col-sm-3 col-sm-push-1">Детали</div>
+                                <div class="col-sm-3 col-sm-push-2"> Править</div>
+                                <div class="col-sm-3 col-sm-push-3">Удалить</div>
                             </div>
                         </th>
                     </tr>
@@ -40,24 +34,18 @@
                     @foreach (var item in Model)
                     {
                     <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Name)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.SurName)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Date)
-                        </td>
+                        <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                        <td>@Html.DisplayFor(modelItem => item.SurName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Status)</td> 
                         <td>
                             <div class="row">
                                 <div class="col-sm-3 col-sm-push-2">
                                     <a asp-action="StudentDetails" asp-route-id="@item.Id" title="Детали"><i class="fa fa-list-alt fa-1x"></i></a>
                                 </div>
-                                <div class="col-sm-3 col-sm-push-2">
+                                <div class="col-sm-3 col-sm-push-3">
                                     <a asp-action="Edit" asp-route-id="@item.Id" title="Править"><i class="fa fa-edit"></i></a>
                                 </div>
-                                <div class="col-sm-3 col-sm-push-2">
+                                <div class="col-sm-3 col-sm-push-4">
                                     <a asp-action="Delete" asp-route-id="@item.Id" title="Удалить"><i class="fa fa-eraser"></i></a>
                                 </div>
                             </div>

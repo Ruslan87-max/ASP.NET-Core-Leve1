@@ -1797,6 +1797,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "WebStore.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/WebStore.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebStore.Domain.dll": {}
+        }
       }
     }
   },
@@ -6061,11 +6071,17 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "WebStore.Domain/1.0.0": {
+      "type": "project",
+      "path": "../WebStore.Domain/WebStore.Domain.csproj",
+      "msbuildProject": "../WebStore.Domain/WebStore.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.4"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.4",
+      "WebStore.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -6093,7 +6109,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\Образование\\GeekBrains\\C# ASP.NET Core. Уровень 1\\Repositories\\HomeWorks\\Lesson1_Task1_MiddleWare\\WebStore.Domain\\WebStore.Domain.csproj": {
+              "projectPath": "F:\\Образование\\GeekBrains\\C# ASP.NET Core. Уровень 1\\Repositories\\HomeWorks\\Lesson1_Task1_MiddleWare\\WebStore.Domain\\WebStore.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Lesson1_Task1_MiddleWare.Models.CategoryViewModel>
+
+<h2>Category</h2>
+<div class="panel-group category-products" id="accordian">
+    <!--category-productsr-->
+    @foreach (var parentCategory in Model)
+    {
+        if (parentCategory.ChildCategories.Count > 0) //Если есть дочерние элементы
+        {
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordian" href="#@parentCategory.Name">
+                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                            @parentCategory.Name
+                        </a>
+                    </h4>
+                </div>
+                <div id="@parentCategory.Name" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            @foreach (var childCategory in parentCategory.ChildCategories)
+                            {
+                                <li><a asp-controller="Catalog" asp-action="Shop" asp-route-CategoryId="@childCategory.Id">@childCategory.Name </a></li>
+                            }
+                        </ul>
+                    </div> 
+                </div>
+            </div>
+        }
+        else //Если дочерних элементов нет:
+        {
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><a asp-controller="Catalog" asp-action="Shop" asp-route-CategoryId ="@parentCategory.Id">@parentCategory.Name</a></h4>
+                </div>
+            </div>
+        }
+    }
+</div><!--/category-products-->
