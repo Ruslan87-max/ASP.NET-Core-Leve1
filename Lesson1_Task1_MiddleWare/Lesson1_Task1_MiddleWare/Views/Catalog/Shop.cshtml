@@ -1,0 +1,30 @@
+﻿@model Lesson1_Task1_MiddleWare.Models.CatalogViewModel
+
+@{
+    ViewData["Title"] = "Shop";
+}
+
+<section id="advertisement">
+    <div class="container">
+        <img src="~/images/shop/advertisement.jpg" alt="" />
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                @await Html.PartialAsync("Partial/_LeftSideBar")
+            </div>
+
+            <div class="col-sm-9 padding-right">
+                @await Html.PartialAsync("Partial/_FeaturedItems", Model.Products)
+                <ul class="pagination">
+                    <li class="active"><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                    <li><a href="">&raquo;</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

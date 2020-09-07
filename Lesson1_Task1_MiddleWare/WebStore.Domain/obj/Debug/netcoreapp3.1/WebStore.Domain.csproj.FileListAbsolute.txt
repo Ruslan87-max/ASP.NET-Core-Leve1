@@ -1,0 +1,9 @@
+F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\WebStore.Domain\bin\Debug\netcoreapp3.1\WebStore.Domain.deps.json
+F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\WebStore.Domain\bin\Debug\netcoreapp3.1\WebStore.Domain.dll
+F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\WebStore.Domain\bin\Debug\netcoreapp3.1\WebStore.Domain.pdb
+F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\WebStore.Domain\obj\Debug\netcoreapp3.1\WebStore.Domain.csprojAssemblyReference.cache
+F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\WebStore.Domain\obj\Debug\netcoreapp3.1\WebStore.Domain.AssemblyInfoInputs.cache
+F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\WebStore.Domain\obj\Debug\netcoreapp3.1\WebStore.Domain.AssemblyInfo.cs
+F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\WebStore.Domain\obj\Debug\netcoreapp3.1\WebStore.Domain.csproj.CoreCompileInputs.cache
+F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\WebStore.Domain\obj\Debug\netcoreapp3.1\WebStore.Domain.dll
+F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\WebStore.Domain\obj\Debug\netcoreapp3.1\WebStore.Domain.pdb

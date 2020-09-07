@@ -10,10 +10,7 @@ namespace Lesson1_Task1_MiddleWare.Controllers
     {
         public IActionResult Index()
         {
-
-            //throw new ApplicationException("Ошибка!");
-            //return Redirect("/Student/Index");
-            return View();
+            return Redirect("/Store/Index");
         }
     }
 }

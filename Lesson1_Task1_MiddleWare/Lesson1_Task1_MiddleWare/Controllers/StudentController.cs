@@ -47,7 +47,7 @@ namespace Lesson1_Task1_MiddleWare.Controllers
             if (id.HasValue)
             {
                 studentModel = _studentsService.GetById(id.Value);
-                if (ReferenceEquals(studentModel, null))  
+                if (ReferenceEquals(studentModel, null))
                     return NotFound();// возвращаем результат 404 Not Found
             }
             else
@@ -62,34 +62,41 @@ namespace Lesson1_Task1_MiddleWare.Controllers
         [Route("edit/{id?}")]
         public IActionResult Edit(Student studentModel)
         {
-            if (studentModel.Id > 0)
+            if (studentModel.Date > new DateTime(2020, 08, 30))
+                ModelState.AddModelError("Date", "Дата поступления не может быть позднее крайней даты зачисления \"30.08.2020\"");
+
+            if (ModelState.IsValid)
             {
-                var dbItem = _studentsService.GetById(studentModel.Id);
+                if (studentModel.Id > 0)
+                {
+                    var dbItem = _studentsService.GetById(studentModel.Id);
 
-                if (ReferenceEquals(dbItem, null))
-                    return NotFound();// возвращаем результат 404 Not Found
+                    if (ReferenceEquals(dbItem, null))
+                        return NotFound();// возвращаем результат 404 Not Found
 
-                dbItem.Name = studentModel.Name;
-                dbItem.SurName = studentModel.SurName;
-                dbItem.Univercity = studentModel.Univercity;
-                dbItem.FacultyName = studentModel.FacultyName;
-                dbItem.Date = studentModel.Date;
+                    dbItem.Name = studentModel.Name;
+                    dbItem.SurName = studentModel.SurName;
+                    dbItem.Univercity = studentModel.Univercity;
+                    dbItem.FacultyName = studentModel.FacultyName;
+                    dbItem.Date = studentModel.Date;
 
-                studentModel = dbItem;
+                    studentModel = dbItem;
+                }
+                else
+                {
+                    _studentsService.AddNew(studentModel);
+                }
+
+                _studentsService.Commit();
+
+                return RedirectToAction("Index");
             }
-            else
-            {
-                _studentsService.AddNew(studentModel);
-            }
-
-            _studentsService.Commit();
-
-            return RedirectToAction("Index");
+            return View(studentModel);
         }
 
         [HttpGet]
         [Route("delete/{id?}")]
-        public IActionResult Delete(int? id) 
+        public IActionResult Delete(int? id)
         {
             if (id.Value > 0)
             {
@@ -103,7 +110,7 @@ namespace Lesson1_Task1_MiddleWare.Controllers
         [HttpPost]
         [Route("delete/{id?}")]
         public IActionResult Delete(Student studentModel)
-        {    
+        {
             if (studentModel.Id > 0)
             {
                 var dbItem = _studentsService.GetById(studentModel.Id);
