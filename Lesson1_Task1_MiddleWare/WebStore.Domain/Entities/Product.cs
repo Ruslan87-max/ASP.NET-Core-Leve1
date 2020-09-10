@@ -16,6 +16,7 @@ namespace WebStore.Domain.Entities
         [ForeignKey("CategoryId")] //Обозначает свойство, используемое в связи c сущностью "Categories" в качестве внешнего ключа.
         public virtual Category Categories { get; set; }
         public int? BrandId { get; set; }
+        public int? SomeField { get; set; }
 
         [ForeignKey("BrandId")] //Обозначает свойство, используемое в связи c сущностью "Brands" в качестве внешнего ключа.
         public virtual Brand Brands { get; set; }
