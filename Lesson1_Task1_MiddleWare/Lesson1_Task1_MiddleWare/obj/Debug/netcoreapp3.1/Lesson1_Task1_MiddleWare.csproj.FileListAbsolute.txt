@@ -237,3 +237,5 @@ F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositor
 F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Cats\Default.cshtml.g.cs
 F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Partial\_FeaturedItems.cshtml.g.cs
 F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Brds\Default.cshtml.g.cs
+F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Partial\_RecommendedItems.cshtml.g.cs
+F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Partial\_CategoryTab.cshtml.g.cs
