@@ -42,8 +42,6 @@ namespace Lesson1_Task1_MiddleWare.Controllers
                 
             };
 
-            //ViewBag.ProductsCount = model.Products.Count();
-
             return View(model);
         }
         public IActionResult ProductDetails()
