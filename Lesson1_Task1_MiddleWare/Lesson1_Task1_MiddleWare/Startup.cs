@@ -8,11 +8,13 @@ using Lesson1_Task1_MiddleWare.InfroStrucure.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WebStore.DAL;
+using WebStore.Domain.Entities;
 
 namespace Lesson1_Task1_MiddleWare
 {
@@ -35,6 +37,35 @@ namespace Lesson1_Task1_MiddleWare
             services.AddSingleton<IStudentsService, InMemoryStudentsData>();
             //services.AddSingleton<IProductService, InMemoryProductService>();
             services.AddScoped<IProductService, SqlProductData>();
+
+            services.AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<WebStoreContext>()
+                .AddDefaultTokenProviders();
+
+            services.Configure<IdentityOptions>(options =>
+                {
+                    options.Password.RequireDigit = false;
+                    options.Password.RequiredLength = 6;
+                    options.Password.RequireLowercase = false;
+                    options.Password.RequireUppercase = false;
+
+                    options.User.RequireUniqueEmail = true;
+
+                    options.Lockout.AllowedForNewUsers = true;
+                    options.Lockout.MaxFailedAccessAttempts = 5;
+                    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(20);
+                });
+
+            services.ConfigureApplicationCookie(options =>
+               {
+                   options.Cookie.HttpOnly = true;
+                   options.Cookie.Expiration = TimeSpan.FromDays(200);
+
+                   options.LoginPath = "/Account/Login";
+                   options.LogoutPath = "/Account/Logout";
+                   options.AccessDeniedPath = "/Account/AccessDenied";
+                   options.SlidingExpiration = true;
+               });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
