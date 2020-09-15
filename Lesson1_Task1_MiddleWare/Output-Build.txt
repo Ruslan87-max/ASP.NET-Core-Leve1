@@ -1,0 +1,4 @@
+﻿1>------ Build started: Project: Lesson1_Task1_MiddleWare, Configuration: Debug Any CPU ------
+1>Lesson1_Task1_MiddleWare -> F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\bin\Debug\netcoreapp3.1\Lesson1_Task1_MiddleWare.dll
+1>Lesson1_Task1_MiddleWare -> F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\bin\Debug\netcoreapp3.1\Lesson1_Task1_MiddleWare.Views.dll
+========== Build: 1 succeeded, 0 failed, 2 up-to-date, 0 skipped ==========

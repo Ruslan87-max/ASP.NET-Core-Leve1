@@ -38,8 +38,7 @@ namespace Lesson1_Task1_MiddleWare.Controllers
                     Name = p.Name,
                     Order = p.Order,
                     Price = p.Price
-                }).OrderBy(p => p.Order).ToList()
-                
+                }).OrderBy(p => p.Order).ToList()                
             };
 
             return View(model);

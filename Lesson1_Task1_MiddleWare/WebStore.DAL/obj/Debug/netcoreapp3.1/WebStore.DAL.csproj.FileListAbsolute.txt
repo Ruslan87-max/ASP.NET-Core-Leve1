@@ -8,8 +8,8 @@ F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositor
 F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\WebStore.DAL\bin\Debug\netcoreapp3.1\WebStore.DAL.pdb
 F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\WebStore.DAL\bin\Debug\netcoreapp3.1\WebStore.Domain.dll
 F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\WebStore.DAL\bin\Debug\netcoreapp3.1\WebStore.Domain.pdb
-F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\WebStore.DAL\obj\Debug\netcoreapp3.1\WebStore.DAL.csproj.CoreCompileInputs.cache
 F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\WebStore.DAL\obj\Debug\netcoreapp3.1\WebStore.DAL.csproj.CopyComplete
 F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\WebStore.DAL\obj\Debug\netcoreapp3.1\WebStore.DAL.dll
 F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\WebStore.DAL\obj\Debug\netcoreapp3.1\WebStore.DAL.pdb
 F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\WebStore.DAL\obj\Debug\netcoreapp3.1\WebStore.DAL.genruntimeconfig.cache
+F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\WebStore.DAL\obj\Debug\netcoreapp3.1\WebStore.DAL.csproj.CoreCompileInputs.cache

@@ -16,7 +16,7 @@ namespace Lesson1_Task1_MiddleWare.Models
         [StringLength(200, MinimumLength=2, ErrorMessage = "В имени должно быть не менее 2х и не более 200 символов")]
         public string Name { get; set; }
 
-        [Required(ErrorMessage = "Имя является обязательным", AllowEmptyStrings = false)]
+        [Required(ErrorMessage = "Фамилие является обязательным", AllowEmptyStrings = false)]
         [Display(Name = "Фамилие")]
         [StringLength(maximumLength: 200, MinimumLength = 2, ErrorMessage = "В имени должно быть не менее 2х и не более 200 символов")]
         public string SurName { get; set; }
