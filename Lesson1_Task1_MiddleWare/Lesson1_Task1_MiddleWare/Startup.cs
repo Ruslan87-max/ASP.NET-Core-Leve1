@@ -48,23 +48,28 @@ namespace Lesson1_Task1_MiddleWare
                     options.Password.RequiredLength = 6;
                     options.Password.RequireLowercase = false;
                     options.Password.RequireUppercase = false;
-
+                    options.Password.RequireNonAlphanumeric = false;
                     options.User.RequireUniqueEmail = true;
+                    options.User.AllowedUserNameCharacters = "абвгдеЄжзийклмнопрстуфхцчшщьыъэю€јЅ¬√ƒ≈®∆«»… ЋћЌќѕ–—“”‘’÷„ЎўЏ№Ёёя" +
+                                                              "abcdefghijklmnopqrstuwvxyzABCDEFGHIJKLMNOPQRSTUWVXYZ"+
+                                                              "1234567890-._@+";
 
                     options.Lockout.AllowedForNewUsers = true;
                     options.Lockout.MaxFailedAccessAttempts = 5;
-                    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(20);
+                    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(20); /*¬озвращает или задает TimeSpan, на который блокируетс€
+                                                                                        * пользователь при возникновении блокировки. ѕо умолчанию
+                                                                                        * 5 минут.*/
                 });
 
             services.ConfigureApplicationCookie(options =>
                {
                    options.Cookie.HttpOnly = true;
-                   options.Cookie.Expiration = TimeSpan.FromDays(200);
 
                    options.LoginPath = "/Account/Login";
                    options.LogoutPath = "/Account/Logout";
                    options.AccessDeniedPath = "/Account/AccessDenied";
                    options.SlidingExpiration = true;
+                   options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
                });
         }
 
@@ -75,6 +80,8 @@ namespace Lesson1_Task1_MiddleWare
             {
                 app.UseDeveloperExceptionPage(); //ѕодробна€ инф-€ об ошибке.
             }
+
+            app.UseAuthentication();
 
             app.UseStaticFiles();
 
