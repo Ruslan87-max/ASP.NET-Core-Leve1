@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "H+o80zumStwwvSzgLGBeoerp2dyqljPq/jnElv8fAM+KxfqwbnWrBl4chJCJj0E4jfwBAgsYUw7FsuseenwM+g==",
+  "dgSpecHash": "3qwr5Y9bIfW2h7dGkjUTGEKrV9Nz6SsyNig24LiY26PF7VDORZg4VMFpjTUjz94fKjMawioCHDZrNPIHiDMgzg==",
   "success": true,
   "projectFilePath": "F:\\Образование\\GeekBrains\\C# ASP.NET Core. Уровень 1\\Repositories\\HomeWorks\\Lesson1_Task1_MiddleWare\\Lesson1_Task1_MiddleWare\\Lesson1_Task1_MiddleWare.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Руслан\\.nuget\\packages\\bundlerminifier.core\\3.2.449\\bundlerminifier.core.3.2.449.nupkg.sha512",
     "C:\\Users\\Руслан\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\Руслан\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Руслан\\.nuget\\packages\\microsoft.aspnetcore.authentication.cookies\\2.2.0\\microsoft.aspnetcore.authentication.cookies.2.2.0.nupkg.sha512",
@@ -80,6 +81,7 @@
     "C:\\Users\\Руслан\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\Руслан\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\Руслан\\.nuget\\packages\\nuget.frameworks\\4.7.0\\nuget.frameworks.4.7.0.nupkg.sha512",
+    "C:\\Users\\Руслан\\.nuget\\packages\\nuglify\\1.5.14\\nuglify.1.5.14.nupkg.sha512",
     "C:\\Users\\Руслан\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Руслан\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Руслан\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

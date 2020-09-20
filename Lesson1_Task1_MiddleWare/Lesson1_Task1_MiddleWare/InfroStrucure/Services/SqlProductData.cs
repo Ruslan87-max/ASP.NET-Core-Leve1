@@ -1,4 +1,6 @@
 ﻿using Lesson1_Task1_MiddleWare.InfroStrucure.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,6 +34,15 @@ namespace Lesson1_Task1_MiddleWare.InfroStrucure.Services
             return _context.Categories.ToList();
         }
 
+        public Product GetProductById(int id)
+        {
+            return _context
+                       .Products
+                       .Include(p => p.Brands)
+                       .Include(p => p.Categories)
+                       .FirstOrDefault(p => p.Id == id);
+        }
+
         public IEnumerable<Product> GetProducts(ProductFilter filter)
         {
             var query = _context.Products.AsQueryable();
@@ -45,5 +56,7 @@ namespace Lesson1_Task1_MiddleWare.InfroStrucure.Services
             return query.ToList();
 
         }
+
+
     }
 }

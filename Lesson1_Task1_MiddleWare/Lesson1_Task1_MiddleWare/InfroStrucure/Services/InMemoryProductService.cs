@@ -465,5 +465,10 @@ namespace Lesson1_Task1_MiddleWare.InfroStrucure.Services
         {
             return _products;
         }
+
+        public Product GetProductById(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

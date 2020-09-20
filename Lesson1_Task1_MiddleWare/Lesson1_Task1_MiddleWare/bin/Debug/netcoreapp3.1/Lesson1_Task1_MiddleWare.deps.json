@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "Lesson1_Task1_MiddleWare/1.0.0": {
         "dependencies": {
+          "BundlerMinifier.Core": "3.2.449",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.EntityFrameworkCore.Design": "3.1.8",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.4",
@@ -300,6 +301,21 @@
         },
         "compile": {
           "Lesson1_Task1_MiddleWare.dll": {}
+        }
+      },
+      "BundlerMinifier.Core/3.2.449": {
+        "dependencies": {
+          "NUglify": "1.5.14",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/dotnet-bundle.dll": {
+            "assemblyVersion": "3.2.449.0",
+            "fileVersion": "3.2.449.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/dotnet-bundle.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authentication/2.2.0": {
@@ -1359,6 +1375,17 @@
         },
         "compile": {
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
+        }
+      },
+      "NUglify/1.5.14": {
+        "runtime": {
+          "lib/netstandard2.0/NUglify.dll": {
+            "assemblyVersion": "1.5.14.0",
+            "fileVersion": "1.5.14.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/NUglify.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -4017,6 +4044,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "BundlerMinifier.Core/3.2.449": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8ssF9o8PavO/YUh1rA/xz2qmNfm7FjC3UxkP7C8BMo2fvSodpWpeUB6/0ISRgq4U3T6+i7+WuAqlSLWHo3n/2w==",
+      "path": "bundlerminifier.core/3.2.449",
+      "hashPath": "bundlerminifier.core.3.2.449.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Authentication/2.2.0": {
       "type": "package",
       "serviceable": true,
@@ -4548,6 +4582,13 @@
       "sha512": "sha512-qbXaB76XYUVLocLBs8Z9TS/ERGK2wm797feO+0JEPFvT7o7MRadOR77mqaSD4J1k8G+DlZQyq+MlkCuxrkr3ag==",
       "path": "nuget.frameworks/4.7.0",
       "hashPath": "nuget.frameworks.4.7.0.nupkg.sha512"
+    },
+    "NUglify/1.5.14": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LosWK9I+Ncd235gxr7qNm+CaKeUr5FoOWPvPC0bRrf+McDf8/pcH2k2pyK8o2PuSImKss+jgXDzIkCvC2GSqRA==",
+      "path": "nuglify/1.5.14",
+      "hashPath": "nuglify.1.5.14.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",

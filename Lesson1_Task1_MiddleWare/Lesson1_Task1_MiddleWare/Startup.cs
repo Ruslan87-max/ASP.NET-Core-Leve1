@@ -51,7 +51,7 @@ namespace Lesson1_Task1_MiddleWare
                     options.Password.RequireNonAlphanumeric = false;
                     options.User.RequireUniqueEmail = true;
                     options.User.AllowedUserNameCharacters = "абвгдеёжзийклмнопрстуфхцчшщьыъэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЭЮЯ" +
-                                                              "abcdefghijklmnopqrstuwvxyzABCDEFGHIJKLMNOPQRSTUWVXYZ"+
+                                                              "abcdefghijklmnopqrstuwvxyzABCDEFGHIJKLMNOPQRSTUWVXYZ" +
                                                               "1234567890-._@+";
 
                     options.Lockout.AllowedForNewUsers = true;
@@ -69,8 +69,13 @@ namespace Lesson1_Task1_MiddleWare
                    options.LogoutPath = "/Account/Logout";
                    options.AccessDeniedPath = "/Account/AccessDenied";
                    options.SlidingExpiration = true;
-                   options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+                   options.ExpireTimeSpan = TimeSpan.FromDays(30);
                });
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<ICartService, CookieCartService>();
+            services.AddScoped<ITotalProductService, TotalProductService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -81,11 +86,11 @@ namespace Lesson1_Task1_MiddleWare
                 app.UseDeveloperExceptionPage(); //Подробная инф-я об ошибке.
             }
 
-            app.UseAuthentication();
-
             app.UseStaticFiles();
-
             app.UseRouting();
+
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             //app.Run(async (context) =>
             //{

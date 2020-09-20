@@ -27,6 +27,7 @@ namespace Lesson1_Task1_MiddleWare
                 {                    
                     var context = services.GetRequiredService<WebStoreContext>();
                     DbInitializer.Initializer(context);
+                    DbInitializer.RoleInitializer(services).Wait();
 
                 }
                 catch(Exception ex)

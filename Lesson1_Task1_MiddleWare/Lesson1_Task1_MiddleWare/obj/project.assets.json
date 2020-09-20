@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "BundlerMinifier.Core/3.2.449": {
+        "type": "package",
+        "dependencies": {
+          "NUglify": "1.5.14",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/dotnet-bundle.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/dotnet-bundle.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authentication/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -1187,6 +1200,15 @@
         },
         "runtime": {
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
+        }
+      },
+      "NUglify/1.5.14": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NUglify.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NUglify.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -2944,6 +2966,28 @@
     }
   },
   "libraries": {
+    "BundlerMinifier.Core/3.2.449": {
+      "sha512": "8ssF9o8PavO/YUh1rA/xz2qmNfm7FjC3UxkP7C8BMo2fvSodpWpeUB6/0ISRgq4U3T6+i7+WuAqlSLWHo3n/2w==",
+      "type": "package",
+      "path": "bundlerminifier.core/3.2.449",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bundlerminifier.core.3.2.449.nupkg.sha512",
+        "bundlerminifier.core.nuspec",
+        "lib/net452/dotnet-bundle.exe",
+        "lib/netcoreapp1.0/dotnet-bundle.dll",
+        "lib/netcoreapp1.0/dotnet-bundle.runtimeconfig.json",
+        "lib/netcoreapp2.0/dotnet-bundle.dll",
+        "lib/netcoreapp2.0/dotnet-bundle.runtimeconfig.json",
+        "lib/netcoreapp3.0/dotnet-bundle.dll",
+        "lib/netcoreapp3.0/dotnet-bundle.runtimeconfig.json",
+        "lib/netcoreapp3.1/dotnet-bundle.dll",
+        "lib/netcoreapp3.1/dotnet-bundle.runtimeconfig.json",
+        "lib/netstandard2.0/dotnet-bundle.dll",
+        "prefercliruntime/prefercliruntime"
+      ]
+    },
     "Microsoft.AspNetCore.Authentication/2.2.0": {
       "sha512": "b0R9X7L6zMqNsssKDvhYHuNi5x0s4DyHTeXybIAyGaitKiW1Q5aAGKdV2codHPiePv9yHfC9hAMyScXQ/xXhPw==",
       "type": "package",
@@ -4683,6 +4727,25 @@
         "lib/netstandard1.6/NuGet.Frameworks.xml",
         "nuget.frameworks.4.7.0.nupkg.sha512",
         "nuget.frameworks.nuspec"
+      ]
+    },
+    "NUglify/1.5.14": {
+      "sha512": "LosWK9I+Ncd235gxr7qNm+CaKeUr5FoOWPvPC0bRrf+McDf8/pcH2k2pyK8o2PuSImKss+jgXDzIkCvC2GSqRA==",
+      "type": "package",
+      "path": "nuglify/1.5.14",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/NUglify.dll",
+        "lib/net35/NUglify.xml",
+        "lib/net40/NUglify.dll",
+        "lib/net40/NUglify.xml",
+        "lib/netstandard1.3/NUglify.dll",
+        "lib/netstandard1.3/NUglify.xml",
+        "lib/netstandard2.0/NUglify.dll",
+        "lib/netstandard2.0/NUglify.xml",
+        "nuglify.1.5.14.nupkg.sha512",
+        "nuglify.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -9221,6 +9284,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "BundlerMinifier.Core >= 3.2.449",
       "Microsoft.AspNetCore.Identity >= 2.2.0",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.8",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.4",
@@ -9272,6 +9336,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "BundlerMinifier.Core": {
+            "target": "Package",
+            "version": "[3.2.449, )"
+          },
           "Microsoft.AspNetCore.Identity": {
             "target": "Package",
             "version": "[2.2.0, )"

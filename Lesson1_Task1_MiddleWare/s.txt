@@ -1,0 +1,7 @@
+﻿1>------ Build started: Project: Lesson1_Task1_MiddleWare, Configuration: Debug Any CPU ------
+1>F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\Components\CategoriesViewComponent.cs(20,49,20,60): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
+1>F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\Components\BrandsViewComponent.cs(20,49,20,60): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
+1>Lesson1_Task1_MiddleWare -> F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\bin\Debug\netcoreapp3.1\Lesson1_Task1_MiddleWare.dll
+1>Lesson1_Task1_MiddleWare -> F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\bin\Debug\netcoreapp3.1\Lesson1_Task1_MiddleWare.Views.dll
+1>Done building project "Lesson1_Task1_MiddleWare.csproj".
+========== Build: 1 succeeded, 0 failed, 2 up-to-date, 0 skipped ==========

@@ -1,6 +1,5 @@
 ﻿@model IEnumerable<Lesson1_Task1_MiddleWare.Models.Student>
 
-
 <div class="container">
     <div class="row ">
         <div class="col-sm-12">
@@ -10,7 +9,9 @@
                 </div>
                 <div class="col-sm-12 col-sm-push-10">
                     <form>
-                        <button asp-action="Edit" type="submit" class="btn btn-success">Добаваить студента</button>
+                        @{ if (User.IsInRole("Admins"))
+                            {<button asp-action="Edit" type="submit" class="btn btn-success">Добаваить студента</button> } }
+
                     </form>
                     <p></p>
                 </div>
@@ -24,36 +25,39 @@
                         <th>
                             <div class="row">
                                 <div class="col-sm-3 col-sm-push-1">Детали</div>
-                                <div class="col-sm-3 col-sm-push-2"> Править</div>
-                                <div class="col-sm-3 col-sm-push-3">Удалить</div>
+                                @{ if (User.IsInRole("Admins"))
+                                    {<div class="col-sm-3 col-sm-push-2"> Править</div>
+                                     <div class="col-sm-3 col-sm-push-3">Удалить</div>}
+                                    }
                             </div>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody style="font-size: 15px">
-                    @foreach (var item in Model)
-                    {
-                    <tr>
-                        <td>@Html.DisplayFor(modelItem => item.Name)</td>
-                        <td>@Html.DisplayFor(modelItem => item.SurName)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Status)</td> 
-                        <td>
-                            <div class="row">
-                                <div class="col-sm-3 col-sm-push-2">
-                                    <a asp-action="StudentDetails" asp-route-id="@item.Id" title="Детали"><i class="fa fa-list-alt fa-1x"></i></a>
-                                </div>
-                                <div class="col-sm-3 col-sm-push-3">
-                                    <a asp-action="Edit" asp-route-id="@item.Id" title="Править"><i class="fa fa-edit"></i></a>
-                                </div>
-                                <div class="col-sm-3 col-sm-push-4">
-                                    <a asp-action="Delete" asp-route-id="@item.Id" title="Удалить"><i class="fa fa-eraser"></i></a>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    }
-                </tbody>
-            </table>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody style="font-size: 15px">
+                        @foreach (var item in Model)
+                        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.SurName)</td>
+                <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                <td>
+                    <div class="row">
+                        <div class="col-sm-3 col-sm-push-2">
+                            <a asp-action="StudentDetails" asp-route-id="@item.Id" title="Детали"><i class="fa fa-list-alt fa-1x"></i></a>
+                        </div>
+                        <div class="col-sm-3 col-sm-push-3">
+                            @{ if (User.IsInRole("Admins"))
+                                {<a asp-action="Edit" asp-route-id="@item.Id" title="Править"><i class="fa fa-edit"></i></a>} }
+                        </div>
+                        <div class="col-sm-3 col-sm-push-4">
+                            @{ if (User.IsInRole("Admins"))
+                                {<a asp-action="Delete" asp-route-id="@item.Id" title="Удалить"><i class="fa fa-eraser"></i></a>} }
+                        </div>
+                    </div>
+                </td>
+            </tr>}
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-</div>

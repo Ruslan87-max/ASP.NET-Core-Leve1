@@ -53,10 +53,7 @@ namespace Lesson1_Task1_MiddleWare.Controllers
         {
             return View();
         }
-        public IActionResult Cart()
-        {
-            return View();
-        }
+
         public IActionResult Checkout()
         {
             return View();
@@ -66,7 +63,6 @@ namespace Lesson1_Task1_MiddleWare.Controllers
             return View();
 
         }
-
         public IActionResult Login()
         {
             return View();
