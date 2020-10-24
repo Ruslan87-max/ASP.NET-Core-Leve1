@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Lesson1_Task1_MiddleWare.Models.UserOrderViewModel>
+
+@{
+    ViewData["Title"] = "Мои заказы";
+    Layout = "Partial/_ProfileLayout";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                Номер
+            </th>
+            <th>
+                Имя
+            </th>
+            <th>
+                Адресс
+            </th>   
+            <th>
+                Телефон
+            </th>
+            <th>
+                Сумма заказа
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.Id
+            </td>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.Address
+            </td>
+            <td>
+                @item.Phone
+            </td>
+            <td>
+                @item.TotalSum
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

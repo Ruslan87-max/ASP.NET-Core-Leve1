@@ -52,7 +52,7 @@ namespace Lesson1_Task1_MiddleWare.Components
                 foreach (var childCatrgory in childCategories)
                 {
                     CategoryViewModel.ChildCategories.Add(new CategoryViewModel()
-                        {
+                    {
                         Id = childCatrgory.Id,
                         Name = childCatrgory.Name,
                         Order = childCatrgory.Order,

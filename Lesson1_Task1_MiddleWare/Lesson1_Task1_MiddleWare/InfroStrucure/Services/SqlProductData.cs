@@ -51,12 +51,9 @@ namespace Lesson1_Task1_MiddleWare.InfroStrucure.Services
                 query = query.Where(p => p.BrandId.HasValue && p.BrandId.Value.Equals(filter.BrandId.Value));
 
             if (filter.CategoryId.HasValue)
-                query = query.Where(p => p.Categories.Equals(filter.CategoryId.Value));
+                query = query.Where(p => p.CategoryId.Equals(filter.CategoryId.Value));
 
             return query.ToList();
-
         }
-
-
     }
 }

@@ -1,0 +1,38 @@
+﻿@using Lesson1_Task1_MiddleWare.Models
+@model OrderViewModel
+
+<form method="post" asp-antiforgery="true" asp-action="CheckOut">
+    <div class="col-sm-6">
+        <input asp-for="Name" placeholder="@nameof(Model.Name)" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+
+        <input asp-for="Phone" placeholder="@nameof(Model.Phone)" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+
+        <input asp-for="Adress" placeholder="@nameof(Model.Adress)" />
+        <span asp-validation-for="Adress" class="text-danger"></span>
+    </div>
+
+    @{
+        ViewData.TryGetValue("sumCart", out var sumObj);
+        ViewData.TryGetValue("sumValue", out var sumValue);
+    }
+    <div class="col-sm-6">
+        <div class="total_area">
+            @if (sumObj != null)
+            {
+                var sum = (decimal)sumObj;
+            <ul>
+                <li>Итого <span>@sum.ToString("C")</span></li>
+                <li>Итого товаров<span>@sumValue.ToString()</span></li>
+            </ul>
+
+                if(sum > 0)
+                {
+                    <input type="submit" value="Оформить заказ" class="btn btn-default check_out"/>
+                }
+            }
+        </div>
+    </div>
+</form>
+

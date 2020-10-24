@@ -7,7 +7,7 @@ using WebStore.Domain.Entities.Base.Interfaces;
 
 namespace WebStore.Domain.Entities.Base
 {
-    class BaseEntity : IBaseEntity
+    public class BaseEntity : IBaseEntity
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
