@@ -1,4 +1,6 @@
-﻿<header id="header">
+﻿
+
+<header id="header">
     <!--header-->
     <div class="header_top">
         <!--header_top-->
@@ -65,7 +67,7 @@
                             <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
                             <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
                             <li><a asp-controller="Store" asp-action="Checkout"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                            <li><a asp-controller="Store" asp-action="Cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                            <li><a asp-controller="Cart" asp-action="Details"><i class="fa fa-shopping-cart"></i> Cart</a></li>
                         </ul>
                     </div>
                 </div>
@@ -74,53 +76,53 @@
                     <vc:log-reg></vc:log-reg>
                 </div>
             </div>
-    </div><!--/header-middle-->
+        </div><!--/header-middle-->
 
-    <div class="header-bottom">
-        <!--header-bottom-->
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-9">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
+        <div class="header-bottom">
+            <!--header-bottom-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="mainmenu pull-left">
+                            <ul class="nav navbar-nav collapse navbar-collapse">
+                                <li><a asp-controller="Store" asp-action="Index" class="active">Home</a></li>
+                                <li class="dropdown">
+                                    <a asp-controller="Catalog" asp-action="Shop">Shop<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a asp-controller="Catalog" asp-action="Shop">Products</a></li>
+                                        @*<li><a asp-controller="Catalog" asp-action="ProductDetails">Product Details</a></li>*@
+                                        <li><a asp-controller="Store" asp-action="Checkout">Checkout</a></li>
+                                        <li><a asp-controller="Cart" asp-action="Details">Cart</a></li>
+                                        <li><a asp-controller="Store" asp-action="Login">Login</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a asp-controller="Store" asp-action="Blog">Blog<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a asp-controller="Store" asp-action="Blog">Blog List</a></li>
+                                        <li><a asp-controller="Store" asp-action="BlogSingle">Blog Single</a></li>
+                                    </ul>
+                                </li>
+                                <li><a asp-controller="Store" asp-action="NotFound404">404</a></li>
+                                <li><a asp-controller="Store" asp-action="ContactUs">Contact</a></li>
+                                <li><a asp-controller="Student" asp-action="Index">Students</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="mainmenu pull-left">
-                        <ul class="nav navbar-nav collapse navbar-collapse">
-                            <li><a asp-controller="Store" asp-action="Index" class="active">Home</a></li>
-                            <li class="dropdown">
-                                <a asp-controller="Catalog" asp-action="Shop">Shop<i class="fa fa-angle-down"></i></a>
-                                <ul role="menu" class="sub-menu">
-                                    <li><a asp-controller="Catalog" asp-action="Shop">Products</a></li>
-                                    <li><a asp-controller="Catalog" asp-action="ProductDetails">Product Details</a></li>
-                                    <li><a asp-controller="Store" asp-action="Checkout">Checkout</a></li>
-                                    <li><a asp-controller="Store" asp-action="Cart">Cart</a></li>
-                                    <li><a asp-controller="Store" asp-action="Login">Login</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a asp-controller="Store" asp-action="Blog">Blog<i class="fa fa-angle-down"></i></a>
-                                <ul role="menu" class="sub-menu">
-                                    <li><a asp-controller="Store" asp-action="Blog">Blog List</a></li>
-                                    <li><a asp-controller="Store" asp-action="BlogSingle">Blog Single</a></li>
-                                </ul>
-                            </li>
-                            <li><a asp-controller="Store" asp-action="NotFound404">404</a></li>
-                            <li><a asp-controller="Store" asp-action="ContactUs">Contact</a></li>
-                            <li><a asp-controller="Student" asp-action="Index">Students</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="search_box pull-right">
-                        <input type="text" placeholder="Search" />
+                    <div class="col-sm-3">
+                        <div class="search_box pull-right">
+                            <input type="text" placeholder="Search" />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div><!--/header-bottom-->
+        </div><!--/header-bottom-->
 </header><!--/header-->

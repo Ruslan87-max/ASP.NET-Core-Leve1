@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("217054f7-b2df-4ea1-91c0-d9c333f58400")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Lesson1_Task1_MiddleWare")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

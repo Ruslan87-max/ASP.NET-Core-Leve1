@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection.Metadata;
 using System.Threading.Tasks;
 using Lesson1_Task1_MiddleWare.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Identity;
@@ -48,9 +49,9 @@ namespace Lesson1_Task1_MiddleWare.Controllers
                 model.Password,
                 model.RememberMe, /*Возвращает значение, указывающее, имеется ли файл Cookie, содержащий сведения о билете проверки подлинности форм*/
                 lockoutOnFailure: false //Флаг, указывающий, следует ли заблокировать учетную запись пользователя в случае сбоя входа.
-                );    
-            
-            if(!loginResult.Succeeded)
+                );
+
+            if (!loginResult.Succeeded)
             {
                 ModelState.AddModelError("", "Вход не возможен!");
                 return View(model);
@@ -80,6 +81,8 @@ namespace Lesson1_Task1_MiddleWare.Controllers
 
             if (newUser.Succeeded)
             {
+                await _userManager.AddToRoleAsync(user, "User");
+
                 await _signInManager.SignInAsync(user, false); //Флаг, указывающий, должен ли файл cookie для входа сохраняться после закрытия браузера.
                 return Redirect("/Store/Index");
             }

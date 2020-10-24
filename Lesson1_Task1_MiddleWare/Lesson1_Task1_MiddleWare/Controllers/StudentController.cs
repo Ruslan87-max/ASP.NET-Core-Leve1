@@ -4,10 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Lesson1_Task1_MiddleWare.InfroStrucure;
 using Lesson1_Task1_MiddleWare.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lesson1_Task1_MiddleWare.Controllers
 {
+    [Authorize]
     [Route("Users")]
     public class StudentController : Controller
     {
@@ -20,12 +22,14 @@ namespace Lesson1_Task1_MiddleWare.Controllers
         StudentsList studentsList = new StudentsList();
 
         [Route("all")]
+        [AllowAnonymous]
         public IActionResult Index()
         {
             return View(_studentsService.GetAll());
         }
 
         [Route("{id?}")]
+        [Authorize(Roles = "Admins,User")]
         public IActionResult StudentDetails(int id)
         {
             //var _students = studentsList.students.FirstOrDefault(x => x.Id.Equals(id));
@@ -41,6 +45,7 @@ namespace Lesson1_Task1_MiddleWare.Controllers
 
         [HttpGet]
         [Route("edit/{id?}")]
+        [Authorize(Roles = "Admins")]
         public IActionResult Edit(int? id)
         {
             Student studentModel;
@@ -60,6 +65,7 @@ namespace Lesson1_Task1_MiddleWare.Controllers
 
         [HttpPost]
         [Route("edit/{id?}")]
+        [Authorize(Roles = "Admins")]
         public IActionResult Edit(Student studentModel)
         {
             if (studentModel.Date > new DateTime(2020, 08, 30))
@@ -93,9 +99,10 @@ namespace Lesson1_Task1_MiddleWare.Controllers
             }
             return View(studentModel);
         }
-
+        
         [HttpGet]
         [Route("delete/{id?}")]
+        [Authorize(Roles = "Admins")]
         public IActionResult Delete(int? id)
         {
             if (id.Value > 0)
@@ -107,8 +114,10 @@ namespace Lesson1_Task1_MiddleWare.Controllers
             return NotFound();
         }
 
+        
         [HttpPost]
         [Route("delete/{id?}")]
+        [Authorize(Roles = "Admins")]
         public IActionResult Delete(Student studentModel)
         {
             if (studentModel.Id > 0)

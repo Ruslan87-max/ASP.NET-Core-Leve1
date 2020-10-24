@@ -1,8 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using WebStore.Domain.Entities;
 
 namespace WebStore.DAL.Context
@@ -13,10 +17,10 @@ namespace WebStore.DAL.Context
         {
             context.Database.EnsureCreated();
 
-                if (context.Products.Any())
-                {
-                    return;   // DB has been seeded
-                }
+            if (context.Products.Any())
+            {
+                return;   // DB has been seeded
+            }
 
 
             var _categories = new List<Category>();
@@ -264,9 +268,9 @@ namespace WebStore.DAL.Context
             });
             #endregion
 
-            using (var trans=context.Database.BeginTransaction())
+            using (var trans = context.Database.BeginTransaction())
             {
-                foreach(var item in _categories)
+                foreach (var item in _categories)
                 {
                     context.Categories.Add(item);
                 }
@@ -482,5 +486,41 @@ namespace WebStore.DAL.Context
                 trans.Commit();
             }
         }
+        public static async Task RoleInitializer(IServiceProvider serviceProvider)
+        {
+            //initializing custom roles 
+            var userManager = serviceProvider.GetRequiredService<UserManager<User>>();
+            var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+            string[] roleNames = { "User", "Admins" };
+            IdentityResult roleResult;
+
+            foreach (var roleName in roleNames)
+            {
+                var roleExists = await roleManager.RoleExistsAsync(roleName);
+                if (!roleExists)
+
+                    //create the roles and seed them to the database
+                    roleResult = await roleManager.CreateAsync(new IdentityRole(roleName));
+            }
+
+            var adminUser = new User() { UserName = "Admin", Email = "adminUser@gmail.com" };
+            string password = "Admin1";
+
+            var _user = await userManager.FindByEmailAsync(email: "adminUser@gmail.com");
+
+            if (_user == null)
+            {
+                var createAdmin = await userManager.CreateAsync(adminUser, password);
+
+                if (createAdmin.Succeeded)
+                {
+                    //here we tie the new user to the role
+                    await userManager.AddToRoleAsync(adminUser, roleNames[1]);
+                }
+
+            }
+        }
     }
+
 }

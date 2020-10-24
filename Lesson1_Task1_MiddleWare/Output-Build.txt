@@ -1,4 +1,7 @@
 ﻿1>------ Build started: Project: Lesson1_Task1_MiddleWare, Configuration: Debug Any CPU ------
-1>Lesson1_Task1_MiddleWare -> F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\bin\Debug\netcoreapp3.1\Lesson1_Task1_MiddleWare.dll
-1>Lesson1_Task1_MiddleWare -> F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\bin\Debug\netcoreapp3.1\Lesson1_Task1_MiddleWare.Views.dll
-========== Build: 1 succeeded, 0 failed, 2 up-to-date, 0 skipped ==========
+1>F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\Controllers\CartController.cs(11,26,11,38): error CS0246: The type or namespace name 'ICartService' could not be found (are you missing a using directive or an assembly reference?)
+1>F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\Controllers\CartController.cs(13,31,13,43): error CS0246: The type or namespace name 'ICartService' could not be found (are you missing a using directive or an assembly reference?)
+1>F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\InfroStrucure\Services\InMemoryProductService.cs(10,43,10,58): error CS0535: 'InMemoryProductService' does not implement interface member 'IProductService.GetProductById(int)'
+1>F:\Образование\GeekBrains\C# ASP.NET Core. Уровень 1\Repositories\HomeWorks\Lesson1_Task1_MiddleWare\Lesson1_Task1_MiddleWare\InfroStrucure\Services\SqlProductData.cs(11,35,11,50): error CS0535: 'SqlProductData' does not implement interface member 'IProductService.GetProductById(int)'
+1>Done building project "Lesson1_Task1_MiddleWare.csproj" -- FAILED.
+========== Build: 0 succeeded, 1 failed, 2 up-to-date, 0 skipped ==========

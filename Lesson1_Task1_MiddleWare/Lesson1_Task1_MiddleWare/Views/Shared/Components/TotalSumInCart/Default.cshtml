@@ -1,0 +1,26 @@
+﻿@model Lesson1_Task1_MiddleWare.Models.TotalInCarViewModel
+
+
+    <table class="table" style="font-size: 18px; background-color:antiquewhite;">
+        <tr>
+            
+            <td>
+                <div class="row">
+                    <div class="col-sm-6 col-sm-push-2">
+                        <p>Общее кол-во товаров: @Model.TotalQuantity</p>
+                        
+                    </div>
+                </div>
+            </td>             
+
+            <td>
+                <div class="row">
+                    <div class="col-sm-6 col-sm-push-2">
+                        <p> Общая сумма товаров: @Model.TotalSum</p>
+                       
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
